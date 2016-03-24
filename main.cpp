@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[])
 {
-	Config c("Test.cfg");
+	Config c("Test.cfg", {{"example1", "23.4"},{"example2", "true"}});
 	c.load();
 	c.print();
 	

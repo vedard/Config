@@ -5,16 +5,17 @@ Config::Config(string filePath)
 {
 }
 
+Config::Config(string filePath, map<string, string> defaultConfiguration)
+: m_filePath(filePath)
+, m_defaultConfiguration(defaultConfiguration)
+{
+}
+
 Config::~Config(){}
 
 void Config::loadDefaultConfiguration()
 {
-	m_data = map<string,string>
-	{
-		// Default setting goes here
-		{"example1", "23.4"},
-		{"example2", "true"},
-	};
+	m_data = m_defaultConfiguration;
 }
 
 void Config::load()

@@ -16,6 +16,7 @@ class Config
 {
 public:
 	Config(string filePath);
+	Config(string filePath, map<string, string> defaultConfiguration);
 	~Config();
 
 	void	load();
